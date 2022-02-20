@@ -58,6 +58,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/sign_up"
+            android:onClick="@{() -> loginViewModel.onSignUp()}"
             app:layout_constraintBaseline_toBaselineOf="@+id/login_button"
             app:layout_constraintEnd_toStartOf="@+id/login_button"
             app:layout_constraintHorizontal_bias="0.5"

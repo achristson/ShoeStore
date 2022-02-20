@@ -11,6 +11,10 @@ class LoginViewModel(): ViewModel(){
     val eventLogin: LiveData<Boolean>
         get() = _eventLogin
 
+    private val _eventSignUp = MutableLiveData<Boolean>()
+    val eventSignUp: LiveData<Boolean>
+        get() = _eventSignUp
+
     fun onLogIn(){
         Timber.i("login called")
         _eventLogin.value = true
@@ -19,5 +23,13 @@ class LoginViewModel(): ViewModel(){
     fun onLogInComplete(){
         Timber.i("login complete called")
         _eventLogin.value = false
+    }
+
+    fun onSignUp(){
+        _eventSignUp.value = true
+    }
+
+    fun onSignUpComplete(){
+        _eventSignUp.value = false
     }
 }

@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/AC/KotlinProjectRepos/ShoeStore/app/src/main/res/layout/activity_main.xml" value="0.55" />
+        <entry key="..\:/Users/AC/KotlinProjectRepos/ShoeStore/app/src/main/res/layout/fragment_instructions.xml" value="0.5031702898550725" />
         <entry key="..\:/Users/AC/KotlinProjectRepos/ShoeStore/app/src/main/res/layout/fragment_login.xml" value="0.3109375" />
+        <entry key="..\:/Users/AC/KotlinProjectRepos/ShoeStore/app/src/main/res/layout/fragment_shoe_list.xml" value="0.5031702898550725" />
         <entry key="..\:/Users/AC/KotlinProjectRepos/ShoeStore/app/src/main/res/layout/fragment_welcome.xml" value="0.3109375" />
         <entry key="..\:/Users/AC/KotlinProjectRepos/ShoeStore/app/src/main/res/layout/login_fragment.xml" value="0.5" />
       </map>

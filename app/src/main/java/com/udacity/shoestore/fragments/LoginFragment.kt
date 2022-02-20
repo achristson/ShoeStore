@@ -36,14 +36,25 @@ class LoginFragment : Fragment() {
         binding.loginViewModel = viewModel
         binding.setLifecycleOwner(this)
 
-        viewModel.eventLogin.observe(viewLifecycleOwner, Observer { hasLoggedIn ->
-            if(hasLoggedIn){
+        viewModel.eventLogin.observe(viewLifecycleOwner) { hasLoggedIn ->
+            if (hasLoggedIn) {
                 onLogIn()
                 viewModel.onLogInComplete()
             }
-        })
+        }
+
+        viewModel.eventSignUp.observe(viewLifecycleOwner) { signUp ->
+            if (signUp) {
+                onSignUp()
+                viewModel.onSignUpComplete()
+            }
+        }
 
         return binding.root
+    }
+
+    private fun onSignUp() {
+        findNavController().navigate(LoginFragmentDirections.actionLoginDestinationToWelcomeFragment() )
     }
 
     private fun onLogIn(){
