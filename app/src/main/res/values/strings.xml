@@ -8,5 +8,32 @@
     <string name="Welcome_message">Welcome to Soft Heels Shoe Store! We\'re glad you\'re here.</string>
     <string name="next_button_text">Next</string>
     <string name="instructions_title_text">Instructions</string>
-    <string name="instructions_text">Instructions place holder</string>
+    <string name="instructions_text">Click next to see a list of shoes \n
+                                    Click the + to add a new shoe \n
+                                    Logout anytime from this page using the menu at the top right</string>
+    <string name="shoe_list_content_description">List of available shoes</string>
+    <string name="add_shoe_button_content_description">add shoes</string>
+    <string name="shoe_image_content_description">Image of shoe</string>
+    <string name="name">name</string>
+    <string name="company">company</string>
+    <string name="size">size</string>
+    <string name="description">description</string>
+    <string name="available_shoes">Available Shoes</string>
+    <string name="shoe_name_label_text">Shoe Name:</string>
+    <string name="company_name_label_text">Company Name:</string>
+    <string name="size_label_text">Size:</string>
+    <string name="description_label_text">Description:</string>
+    <string name="shoe_detail_title_text">Add A New Shoe</string>
+    <string name="shoe_name_hint">Shoe Name</string>
+    <string name="company_name_hint">Company Name</string>
+    <string name="size_hint">Size</string>
+    <string name="description_hint">Description</string>
+    <string name="cancel_button_text">Cancel</string>
+    <string name="save_button_text">Save</string>
+    <string name="shoe_name_display">Shoe: %1$s</string>
+    <string name="company_name_display">Company: %1$s</string>
+    <string name="size_display">Size: %1$s</string>
+    <string name="description_display">Description: %1$s</string>
+    <string name="logout">Logout</string>
+    <string name="store_title_text">Soft Heels Shoe Store</string>
 </resources>

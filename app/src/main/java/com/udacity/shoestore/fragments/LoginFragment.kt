@@ -22,7 +22,7 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(
             inflater,
@@ -60,6 +60,4 @@ class LoginFragment : Fragment() {
     private fun onLogIn(){
         findNavController().navigate(LoginFragmentDirections.actionLoginDestinationToWelcomeFragment() )
     }
-
-
 }

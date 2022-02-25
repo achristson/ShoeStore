@@ -16,12 +16,10 @@ class LoginViewModel(): ViewModel(){
         get() = _eventSignUp
 
     fun onLogIn(){
-        Timber.i("login called")
         _eventLogin.value = true
     }
 
     fun onLogInComplete(){
-        Timber.i("login complete called")
         _eventLogin.value = false
     }
 

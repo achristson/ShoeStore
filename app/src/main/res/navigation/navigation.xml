@@ -15,7 +15,7 @@
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_left" />
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/welcome_destination"
@@ -28,7 +28,7 @@
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_left" />
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/instructions_destination"
@@ -41,11 +41,38 @@
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_left" />
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/shoe_list_destination"
         android:name="com.udacity.shoestore.fragments.ShoeListFragment"
         android:label="ShoeListFragment"
-        tools:layout="@layout/fragment_shoe_list"/>
+        tools:layout="@layout/fragment_shoe_list">
+        <action
+            android:id="@+id/action_shoe_list_destination_to_shoeDetailsFragment"
+            app:destination="@id/shoe_details_destination"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="shoe"
+            app:argType="com.udacity.shoestore.models.Shoe"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoe_details_destination"
+        android:name="com.udacity.shoestore.fragments.ShoeDetailsFragment"
+        android:label="ShoeDetailsFragment"
+        tools:layout="@layout/fragment_shoe_details">
+        <action
+            android:id="@+id/action_shoe_details_destination_to_shoe_list_destination"
+            app:destination="@id/shoe_list_destination"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/instructions_destination" />
+    </fragment>
 </navigation>
