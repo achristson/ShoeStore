@@ -13,11 +13,13 @@ import com.udacity.shoestore.databinding.FragmentShoeDetailsBinding
 import com.udacity.shoestore.models.Shoe
 import com.udacity.shoestore.viewmodels.ShoeDetailsViewModel
 import androidx.fragment.app.activityViewModels
+import timber.log.Timber
 
 class ShoeDetailsFragment : Fragment() {
 
     private lateinit var binding: FragmentShoeDetailsBinding
     private lateinit var viewModel: ShoeDetailsViewModel
+    private var shoe: Shoe = Shoe("",0.0,"","")
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -33,6 +35,7 @@ class ShoeDetailsFragment : Fragment() {
         )
         viewModel = ViewModelProvider(this).get(ShoeDetailsViewModel::class.java)
         binding.shoeDetailsViewModel = viewModel
+        binding.shoe = shoe
         binding.setLifecycleOwner(this)
 
         viewModel.eventSave.observe(viewLifecycleOwner){ hasSaved ->
@@ -57,12 +60,12 @@ class ShoeDetailsFragment : Fragment() {
     }
 
     private fun onSave() {
-        val shoe = viewModel.addShoe(
-            binding.shoeName.text.toString(),
-            binding.companyName.text.toString(),
-            binding.size.text.toString().toDouble(),
-            binding.description.text.toString()
-        )
-        findNavController().navigate(ShoeDetailsFragmentDirections.actionShoeDetailsDestinationToShoeListDestination(shoe))
+        binding.apply {
+            shoe?.name = shoeName.text.toString()
+            shoe?.company = companyName.text.toString()
+            shoe?.size = size.text.toString().toDouble()
+            shoe?.description = description.text.toString()
+        }
+        findNavController().navigate(ShoeDetailsFragmentDirections.actionShoeDetailsDestinationToShoeListDestination(binding.shoe))
     }
 }

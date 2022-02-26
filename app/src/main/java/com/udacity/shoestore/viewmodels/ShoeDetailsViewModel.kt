@@ -7,29 +7,16 @@ import com.udacity.shoestore.models.Shoe
 
 class ShoeDetailsViewModel() : ViewModel(){
 
-    private val _eventCancel = MutableLiveData<Boolean>()
+    private var _eventCancel = MutableLiveData<Boolean>()
     val eventCancel : LiveData<Boolean>
         get() = _eventCancel
 
-    private val _eventSave = MutableLiveData<Boolean>()
+    private var _eventSave = MutableLiveData<Boolean>()
     val eventSave : LiveData<Boolean>
         get() = _eventSave
 
     fun onSave(){
         _eventSave.value = true
-    }
-
-    fun addShoe(
-        shoeName: String,
-        companyName: String,
-        size: Double,
-        description: String): Shoe {
-        return Shoe(
-            shoeName,
-            size,
-            companyName,
-            description
-        )
     }
 
     fun onSaveComplete(){

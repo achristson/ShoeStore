@@ -5,6 +5,9 @@
         <variable
             name="shoeDetailsViewModel"
             type="com.udacity.shoestore.viewmodels.ShoeDetailsViewModel" />
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -40,6 +43,7 @@
             style="@style/new_shoe_input_box_style"
             android:autofillHints=""
             android:hint="@string/company_name_hint"
+            android:text="@={shoe.company}"
             android:inputType="textPersonName"
             app:layout_constraintBottom_toTopOf="@+id/size"
             app:layout_constraintEnd_toEndOf="@+id/shoe_name"
@@ -69,6 +73,7 @@
             android:hint="@string/size_hint"
             android:inputType="number"
             android:minHeight="48dp"
+            android:text="@={``+ shoe.size}"
             app:layout_constraintBottom_toTopOf="@+id/description"
             app:layout_constraintEnd_toEndOf="@+id/company_name"
             app:layout_constraintHorizontal_bias="0.0"
@@ -97,6 +102,7 @@
             android:hint="@string/description_hint"
             android:inputType="textMultiLine"
             android:minHeight="48dp"
+            android:text="@={shoe.description}"
             app:layout_constraintBottom_toTopOf="@+id/guideline2"
             app:layout_constraintEnd_toEndOf="@+id/size"
             app:layout_constraintHorizontal_bias="0.0"
@@ -125,6 +131,7 @@
             android:ems="10"
             android:hint="@string/shoe_name_hint"
             android:inputType="textPersonName"
+            android:text="@={shoe.name}"
             app:layout_constraintBottom_toTopOf="@+id/company_name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
